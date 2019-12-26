@@ -7,6 +7,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 nmap nerd :NERDTreeToggle<CR>
