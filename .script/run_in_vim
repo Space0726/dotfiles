@@ -1,0 +1,21 @@
+#!/bin/sh
+for name in "$@"
+do
+    case "$name" in
+        *.java)
+            java.exe $(basename "$name" ".java")
+            ;;
+        *.py)
+            python3 "$name"
+            ;;
+        *.c)
+            ./$(basename "$name" ".c")
+            ;;
+        *.cc)
+            ./$(basename "$name" ".cc")
+            ;;
+        *.cpp)
+            ./$(basename "$name" ".cpp")
+            ;;
+    esac
+done

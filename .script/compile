@@ -1,0 +1,23 @@
+#!/bin/sh
+for name in "$@"
+do
+    case "$name" in
+        *.c)
+            gcc -O2 -o $(basename "$name" ".c") "$name"
+            ;;
+        *.cc)
+            g++ -O2 -o $(basename "$name" ".cc") "$name"
+            ;;
+        *.cpp)
+            g++ -O2 -o $(basename "$name" ".cpp") "$name"
+            ;;
+        *.java)
+            javac.exe -encoding utf-8 "$name"
+            ;;
+        *.py)
+            ;;
+        *)
+            echo "$name is not my type."
+            ;;
+    esac
+done
