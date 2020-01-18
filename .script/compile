@@ -1,23 +1,47 @@
 #!/bin/sh
-for name in "$@"
-do
-    case "$name" in
-        *.c)
-            gcc -O2 -o $(basename "$name" ".c") "$name"
-            ;;
-        *.cc)
-            g++ -O2 -o $(basename "$name" ".cc") "$name"
-            ;;
-        *.cpp)
-            g++ -O2 -o $(basename "$name" ".cpp") "$name"
-            ;;
-        *.java)
-            javac.exe -encoding utf-8 "$name"
-            ;;
-        *.py)
-            ;;
-        *)
-            echo "$name is not my type."
-            ;;
-    esac
-done
+
+if [ "$1" == "-g" ]; then
+    for name in "$@"
+    do
+        case "$name" in
+            -g)
+                continue
+                ;;
+            *.c)
+                gcc -O2 -g -o $(basename "$name" ".c") "$name"
+                ;;
+            *.cc)
+                g++ -O2 -g -o $(basename "$name" ".cc") "$name"
+                ;;
+            *.cpp)
+                g++ -O2 -g -o $(basename "$name" ".cpp") "$name"
+                ;;
+            *)
+                echo "$name is not my type."
+                ;;
+        esac
+    done
+else
+    for name in "$@"
+    do
+        case "$name" in
+            *.c)
+                gcc -O2 -o $(basename "$name" ".c") "$name"
+                ;;
+            *.cc)
+                g++ -O2 -o $(basename "$name" ".cc") "$name"
+                ;;
+            *.cpp)
+                g++ -O2 -o $(basename "$name" ".cpp") "$name"
+                ;;
+            *.java)
+                javac.exe -encoding utf-8 "$name"
+                ;;
+            *.py)
+                ;;
+            *)
+                echo "$name is not my type."
+                ;;
+        esac
+    done
+fi

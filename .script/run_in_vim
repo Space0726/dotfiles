@@ -1,4 +1,5 @@
 #!/bin/sh
+
 for name in "$@"
 do
     case "$name" in
