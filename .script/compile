@@ -5,19 +5,18 @@ if [ "$1" == "-g" ]; then
     do
         case "$name" in
             -g)
-                continue
                 ;;
             *.c)
-                gcc -O2 -g -o $(basename "$name" ".c") "$name"
+                gcc -O2 -g -o "${name%.*}" "${name}"
                 ;;
             *.cc)
-                g++ -O2 -g -o $(basename "$name" ".cc") "$name"
+                g++ -O2 -g -o "${name%.*}" "${name}"
                 ;;
             *.cpp)
-                g++ -O2 -g -o $(basename "$name" ".cpp") "$name"
+                g++ -O2 -g -o "${name%.*}" "${name}"
                 ;;
             *)
-                echo "$name is not my type."
+                echo "$(basename "${name}") is not my type."
                 ;;
         esac
     done
@@ -26,21 +25,21 @@ else
     do
         case "$name" in
             *.c)
-                gcc -O2 -o $(basename "$name" ".c") "$name"
+                gcc -O2 -o "${name%.*}" "${name}"
                 ;;
             *.cc)
-                g++ -O2 -o $(basename "$name" ".cc") "$name"
+                g++ -O2 -o "${name%.*}" "${name}"
                 ;;
             *.cpp)
-                g++ -O2 -o $(basename "$name" ".cpp") "$name"
+                g++ -O2 -o "${name%.*}" "${name}"
                 ;;
             *.java)
-                javac.exe -encoding utf-8 "$name"
+                javac.exe -encoding utf-8 "`wslpath -w "$name"`"
                 ;;
             *.py)
                 ;;
             *)
-                echo "$name is not my type."
+                echo "$(basename "${name}") is not my type."
                 ;;
         esac
     done

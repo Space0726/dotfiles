@@ -53,14 +53,14 @@ nnoremap <S-tab> <c-w>W
 " ----------------------------------------------------------------------------
 nnoremap <silent> <C-k> :move-2<CR>
 nnoremap <silent> <C-j> :move+<CR>
-nnoremap <silent> <C-h> <<
 nnoremap <silent> <C-l> >>
+nnoremap <silent> <C-h> <<
 
 " ----------------------------------------------------------------------------
 " Compile c, c++, java source file and run
 " ----------------------------------------------------------------------------
 function Compile()
-    execute '!clear && bash compile ' . expand('%:t')
+    !clear && bash compile '%:p'
 endfunction
 
 nnoremap <Leader>c :call Compile()<CR>
@@ -69,7 +69,7 @@ nnoremap <Leader>c :call Compile()<CR>
 " Compile c, c++ source file and debug with gdb
 " ----------------------------------------------------------------------------
 function Debug()
-    execute '!clear && bash compile ' . '-g ' . expand('%:t') . ' && gdb ' . expand('%:t:r')
+    !clear && bash compile -g '%:p' && gdb '%:p:r'
 endfunction
 
 nnoremap <Leader>d :call Debug()<CR>
@@ -78,7 +78,7 @@ nnoremap <Leader>d :call Debug()<CR>
 " Compile c, c++, java, python source file and run
 " ----------------------------------------------------------------------------
 function Run()
-    execute '!clear && bash compile ' . expand('%:t') . ' && bash run_in_vim ' . expand('%:t')
+    !clear && bash compile '%:p' && bash run_in_vim '%:p'
 endfunction
 
 nnoremap <Leader>r :call Run()<CR>

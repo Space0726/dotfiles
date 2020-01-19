@@ -4,19 +4,19 @@ for name in "$@"
 do
     case "$name" in
         *.java)
-            java.exe $(basename "$name" ".java")
+            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
             ;;
         *.py)
-            python3 "$name"
+            python3 "${name}"
             ;;
         *.c)
-            ./$(basename "$name" ".c")
+            "${name%.*}"
             ;;
         *.cc)
-            ./$(basename "$name" ".cc")
+            "${name%.*}"
             ;;
         *.cpp)
-            ./$(basename "$name" ".cpp")
+            "${name%.*}"
             ;;
     esac
 done
