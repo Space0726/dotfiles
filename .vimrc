@@ -57,7 +57,7 @@ nnoremap <silent> <C-l> >>
 nnoremap <silent> <C-h> <<
 
 " ----------------------------------------------------------------------------
-" Compile c, c++, java source file and run
+" Compile c, c++, java source file
 " ----------------------------------------------------------------------------
 function Compile()
     !clear && bash compile '%:p'
