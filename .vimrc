@@ -78,7 +78,7 @@ nnoremap <Leader>d :call Debug()<CR>
 " Compile c, c++, java, python source file and run
 " ----------------------------------------------------------------------------
 function Run()
-    !clear && bash compile '%:p' && bash run_in_vim '%:p'
+    !clear && bash compile '%:p' && run '%:p'
 endfunction
 
 nnoremap <Leader>r :call Run()<CR>

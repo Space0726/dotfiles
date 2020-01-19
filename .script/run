@@ -6,6 +6,9 @@ do
         *.java)
             java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
             ;;
+        *.class)
+            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
+            ;;
         *.py)
             python3 "${name}"
             ;;
@@ -17,6 +20,9 @@ do
             ;;
         *.cpp)
             "${name%.*}"
+            ;;
+        *)
+            "${name}"
             ;;
     esac
 done
