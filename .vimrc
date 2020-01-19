@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 
 " ----------------------------------------------------------------------------
-"  For plugins
+" Plugin settings
 " ----------------------------------------------------------------------------
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,7 +20,7 @@ filetype plugin indent on
 filetype plugin on
 
 " ----------------------------------------------------------------------------
-"  For vim settings
+" Vim settings
 " ----------------------------------------------------------------------------
 set cindent
 set autoindent
@@ -66,7 +66,7 @@ endfunction
 nnoremap <Leader>c :call Compile()<CR>
 
 " ----------------------------------------------------------------------------
-" Compile c, c++, java source file and debug with gdb
+" Compile c, c++ source file and debug with gdb
 " ----------------------------------------------------------------------------
 function Debug()
     execute '!clear && bash compile ' . '-g ' . expand('%:t') . ' && gdb ' . expand('%:t:r')
