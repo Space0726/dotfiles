@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -41,6 +42,7 @@ set mouse=a
 set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
+colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
@@ -61,7 +63,6 @@ xnoremap <silent> <C-h> <gv
 xnoremap <silent> <C-l> >gv
 xnoremap < <gv
 xnoremap > >gv
-
 
 " ----------------------------------------------------------------------------
 " Compile c, c++, java source file
