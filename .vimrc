@@ -63,9 +63,23 @@ xnoremap < <gv
 xnoremap > >gv
 
 " ----------------------------------------------------------------------------
+" Auto bracket
+" ----------------------------------------------------------------------------
+inoremap <silent> (     ()<Esc>i
+inoremap <silent> (<CR> ()<Esc>i<CR><Esc>O
+inoremap <silent> {     {}<Esc>i
+inoremap <silent> {<CR> {}<Esc>i<CR><Esc>O
+inoremap <silent> [     []<Esc>i
+inoremap <silent> [<CR> []<Esc>i<CR><Esc>O
+
+" ----------------------------------------------------------------------------
 " Remapping
 " ----------------------------------------------------------------------------
 inoremap <silent> <S-Tab> <C-p>
+inoremap <silent> <C-j>   <Esc>ja
+inoremap <silent> <C-k>   <Esc>ka
+inoremap <silent> <C-h>   <Esc>i
+inoremap <silent> <C-l>   <Esc>la
 
 " ----------------------------------------------------------------------------
 " Compile c, c++, java source file
@@ -102,7 +116,8 @@ nnoremap <F8> :TagbarToggle<CR>
 " ----------------------------------------------------------------------------
 " For NERDTree
 " ----------------------------------------------------------------------------
-nnoremap nerd :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+inoremap <C-n> <Esc>:NERDTreeToggle<CR>
 
 " ----------------------------------------------------------------------------
 " For NERDCommenter
@@ -122,8 +137,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " ----------------------------------------------------------------------------
 " Macros
 " ----------------------------------------------------------------------------
-let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>ios::sync_with_stdio(false);\<CR>cin.tie(NULL);\<CR>\<CR>\<CR>return 0;\<CR>}\<Esc>kkko"
-let @i="i#include <cstdio>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<CR>}\<Esc>kkko"
-let @c="i#include <stdio.h>\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<CR>}\<Esc>kkko"
-let @j="ipublic class  {\<CR>public static void main(String[] args) {\<CR>}\<CR>}\<Esc>ggeela"
+let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main(\<Esc>la {\<CR>ios::sync_with_stdio(false\<Esc>la;\<CR>cin.tie(NULL\<Esc>la;\<CR>\<CR>\<CR>return 0;\<Esc>kko"
+let @i="i#include <cstdio>\<CR>\<CR>using namespace std;\<CR>\<CR>int main(\<Esc>la {\<CR>\<CR>return 0;\<Esc>kko"
+let @c="i#include <stdio.h>\<CR>\<CR>int main(\<Esc>la {\<CR>\<CR>return 0;\<Esc>kko"
+let @j="ipublic class  {\<CR>public static void main(String[\<Esc>la args\<Esc>la {\<CR>\<Esc>ggeela"
 let @h="i<!DOCTYPE html>\<CR><html>\<CR><head>\<CR><meta charset=\"UTF-8\">\<CR><title></title>\<CR><link rel=\"stylesheet\" href=\"./style.css\">\<CR></head>\<CR><body>\<CR><header>\<CR></header>\<CR></body>\<CR></html>\<Esc>:5\<CR>f>a"
