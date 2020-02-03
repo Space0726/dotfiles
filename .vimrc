@@ -78,6 +78,10 @@ inoremap <silent> [<CR> []<Esc>i<CR><Esc>O
 " Remapping
 " ----------------------------------------------------------------------------
 inoremap <silent> <S-Tab> <C-p>
+inoremap <silent> <C-j>   <Esc>ja
+inoremap <silent> <C-k>   <Esc>ka
+inoremap <silent> <C-h>   <Esc>i
+inoremap <silent> <C-l>   <Esc>la
 
 " ----------------------------------------------------------------------------
 " Compile c, c++, java source file
@@ -114,7 +118,8 @@ nnoremap <F8> :TagbarToggle<CR>
 " ----------------------------------------------------------------------------
 " For NERDTree
 " ----------------------------------------------------------------------------
-nnoremap nerd :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+inoremap <C-n> <Esc>:NERDTreeToggle<CR>
 
 " ----------------------------------------------------------------------------
 " For NERDCommenter
