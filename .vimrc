@@ -80,6 +80,7 @@ inoremap <silent> []    []
 " ----------------------------------------------------------------------------
 " Remapping
 " ----------------------------------------------------------------------------
+nnoremap <silent> <C-i>   ggVG=
 inoremap <silent> <S-Tab> <C-p>
 inoremap <silent> <C-j>   <Esc>ja
 inoremap <silent> <C-k>   <Esc>ka
@@ -146,4 +147,4 @@ let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main(\<E
 let @i="i#include <cstdio>\<CR>\<CR>using namespace std;\<CR>\<CR>int main(\<Esc>la {\<CR>\<CR>return 0;\<Esc>kko"
 let @c="i#include <stdio.h>\<CR>\<CR>int main(\<Esc>la {\<CR>\<CR>return 0;\<Esc>kko"
 let @j="ipublic class  {\<CR>public static void main(String[\<Esc>la args\<Esc>la {\<CR>\<Esc>ggeela"
-let @h="i<!DOCTYPE html>\<CR><html>\<CR><head>\<CR><meta charset=\"UTF-8\">\<CR><title></title>\<CR><link rel=\"stylesheet\" href=\"./style.css\">\<CR></head>\<CR><body>\<CR><header>\<CR></header>\<CR></body>\<CR></html>\<Esc>:5\<CR>f>a"
+let @h="i<!DOCTYPE html>\<CR><html>\<CR><head>\<CR><meta charset=\"UTF-8\">\<CR><title></title>\<CR><link rel=\"stylesheet\" href=\"./style.css\">\<CR></head>\<CR><body>\<CR></body>\<CR></html>\<Esc>:5\<CR>f>a"
