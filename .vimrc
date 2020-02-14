@@ -14,7 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
-Plugin 'flazz/vim-colorschemes'
+"Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -42,7 +42,7 @@ set mouse=a
 set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
-colorscheme gruvbox
+"colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
@@ -143,8 +143,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " ----------------------------------------------------------------------------
 " Macros
 " ----------------------------------------------------------------------------
-let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>ios::sync_with_stdio(false);\<CR>cin.tie(NULL);\<CR>\<CR>\<CR>return 0;\<Esc>kko"
-let @i="i#include <cstdio>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<Esc>kko"
+let @i="ggVG="
+let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<Esc>kko"
 let @c="i#include <stdio.h>\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<Esc>kko"
 let @j="ipublic class  {\<CR>public static void main(String[] args) {\<CR>\<Esc>ggeela"
 let @h="i<!DOCTYPE html>\<CR><html>\<CR><head>\<CR><meta charset=\"UTF-8\">\<CR><title></title>\<CR><link rel=\"stylesheet\" href=\"./style.css\">\<CR></head>\<CR><body>\<CR></body>\<CR></html>\<Esc>:5\<CR>f>a"
