@@ -1,0 +1,3 @@
+# Find binary files under current directory(exclude .git directory)
+# ! and -prune option makes directory(or files) excluding.
+find . ! \( -path './.git' -prune \) -type f -and ! -name '*.*'
