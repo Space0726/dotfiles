@@ -39,7 +39,7 @@ else
             *.py)
                 ;;
             *.rs)
-                rustc --out-dir "$(dirname "${name}")" "${name}"
+                rustc -O --out-dir "$(dirname "${name}")" "${name}"
                 ;;
             *)
                 echo "$(basename "${name}") is not my type."

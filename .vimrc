@@ -14,6 +14,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'leafgarland/typescript-vim'
+"Plugin 'pangloss/vim-javascript'
 "Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
