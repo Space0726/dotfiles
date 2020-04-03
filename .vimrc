@@ -15,9 +15,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'leafgarland/typescript-vim'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,7 +43,8 @@ set mouse=a
 set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
-"colorscheme gruvbox
+set t_ut=""
+colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
