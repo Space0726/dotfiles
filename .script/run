@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: run file..."
+    exit 0
+fi
 
 for name in "$@"
 do
