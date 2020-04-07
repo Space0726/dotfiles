@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: run file..."
+    exit 1
+fi
+
+for name in "$@"
+do
+    case "$name" in
+        *.java)
+            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
+            ;;
+        *.class)
+            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
+            ;;
+        *.py)
+            python3 "${name}"
+            ;;
+        *.c)
+            "${name%.*}"
+            ;;
+        *.cc)
+            "${name%.*}"
+            ;;
+        *.cpp)
+            "${name%.*}"
+            ;;
+        *.rs)
+            "${name%.*}"
+            ;;
+        *)
+            "${name}"
+            ;;
+    esac
+done
