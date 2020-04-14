@@ -1,3 +1,8 @@
 # Find binary files under current directory(exclude .git directory)
 # ! and -prune option makes directory(or files) excluding.
-find . ! \( -path './.git' -prune \) -type f -and ! -name '*.*'
+
+# For find exe files without extensions.
+# file `find . ! \( -path './.git' -prune \) -type f -and ! -name '*.*'` | grep ELF | cut -d: -f1
+
+# For find ELF files.
+file `find . ! \( -path './.git' -prune \) ` | grep ELF | cut -d: -f1
