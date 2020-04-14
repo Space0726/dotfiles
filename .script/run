@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]; then
     echo "Usage: run file..."
-    exit 0
+    exit 1
 fi
 
 for name in "$@"
