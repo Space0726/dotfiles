@@ -15,9 +15,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'leafgarland/typescript-vim'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,12 +24,12 @@ filetype plugin on
 " ----------------------------------------------------------------------------
 " Vim settings
 " ----------------------------------------------------------------------------
-set cindent
 set autoindent
+set cindent
 set smartindent
-set tabstop=4
+set tabstop=4       " Tab to space 4
 set shiftwidth=4
-set nu
+set nu              " Adds line number
 set ruler
 set title
 syntax on
@@ -45,7 +43,8 @@ set mouse=a
 set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
-"colorscheme gruvbox
+set t_ut=""         " Prevent background color bug in WSL
+colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
@@ -103,7 +102,7 @@ nnoremap <Leader>c :call Compile()<CR>
 " Compile c, c++ source file and debug with gdb
 " ----------------------------------------------------------------------------
 function Debug()
-    !clear && bash compile -g '%:p' && gdb '%:p:r'
+    !clear && compile -g '%:p' && gdb '%:p:r'
 endfunction
 
 nnoremap <Leader>d :call Debug()<CR>
@@ -112,7 +111,7 @@ nnoremap <Leader>d :call Debug()<CR>
 " Compile c, c++, java, python source file and run
 " ----------------------------------------------------------------------------
 function Run()
-    !clear && bash compile '%:p' && run '%:p'
+    !clear && compile '%:p' && run '%:p'
 endfunction
 
 nnoremap <Leader>r :call Run()<CR>
