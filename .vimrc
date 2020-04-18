@@ -47,6 +47,12 @@ set t_ut=""         " Prevent background color bug in WSL
 colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
+" File type settings
+" ----------------------------------------------------------------------------
+au Filetype c   set tabstop=8 | set shiftwidth=8
+au Filetype asm set tabstop=8 | set shiftwidth=8
+
+" ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
 " ----------------------------------------------------------------------------
 nnoremap <tab>   <c-w>w
