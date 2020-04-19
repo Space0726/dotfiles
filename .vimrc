@@ -102,16 +102,16 @@ inoremap <silent> <C-l>   <Esc>la
 " Compile c, c++, java source file
 " ----------------------------------------------------------------------------
 function Compile()
-    !clear && compile '%:p'
+    !clear && cpl '%:p'
 endfunction
 
-nnoremap <Leader>c :call Compile()<CR>
+nnoremap <Leader>b :call Compile()<CR>
 
 " ----------------------------------------------------------------------------
 " Compile c, c++ source file and debug with gdb
 " ----------------------------------------------------------------------------
 function Debug()
-    !clear && compile -g '%:p' && gdb '%:p:r'
+    !clear && cpl -g '%:p' && gdb '%:p:r'
 endfunction
 
 nnoremap <Leader>d :call Debug()<CR>
@@ -120,7 +120,7 @@ nnoremap <Leader>d :call Debug()<CR>
 " Compile c, c++, java, python source file and run
 " ----------------------------------------------------------------------------
 function Run()
-    !clear && compile '%:p' && run '%:p'
+    !clear && cpl '%:p' && rn '%:p'
 endfunction
 
 nnoremap <Leader>r :call Run()<CR>
