@@ -19,7 +19,6 @@ Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
-filetype plugin on
 
 " ----------------------------------------------------------------------------
 " Vim settings
@@ -44,13 +43,18 @@ set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
 set t_ut=""         " Prevent background color bug in WSL
-colorscheme gruvbox
+"colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " File type settings
 " ----------------------------------------------------------------------------
-au Filetype c   set tabstop=8 | set shiftwidth=8
-au Filetype asm set tabstop=8 | set shiftwidth=8
+au Filetype c               set tabstop=8 | set shiftwidth=8
+au Filetype asm             set tabstop=8 | set shiftwidth=8
+au Filetype html            set tabstop=2 | set shiftwidth=2
+au Filetype css             set tabstop=2 | set shiftwidth=2
+au Filetype javascript      set tabstop=2 | set shiftwidth=2
+au Filetype typescript      set tabstop=2 | set shiftwidth=2
+au Filetype typescriptreact set tabstop=2 | set shiftwidth=2
 
 " ----------------------------------------------------------------------------
 " <tab> / <s-tab> | Circular windows navigation
@@ -88,7 +92,6 @@ inoremap <silent> [<CR> []<Esc>i<CR><Esc>O
 " ----------------------------------------------------------------------------
 " Remapping
 " ----------------------------------------------------------------------------
-"nnoremap <silent> <C-I>   ggVG=
 inoremap <silent> <S-Tab> <C-p>
 inoremap <silent> <C-j>   <Esc>ja
 inoremap <silent> <C-k>   <Esc>ka
@@ -99,7 +102,7 @@ inoremap <silent> <C-l>   <Esc>la
 " Compile c, c++, java source file
 " ----------------------------------------------------------------------------
 function Compile()
-    !clear && bash compile '%:p'
+    !clear && compile '%:p'
 endfunction
 
 nnoremap <Leader>c :call Compile()<CR>
@@ -146,7 +149,7 @@ let g:airline_theme = 'bubblegum'
 " ----------------------------------------------------------------------------
 " Close vim if the only window left open is a NERDTree
 " ----------------------------------------------------------------------------
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ----------------------------------------------------------------------------
 " Macros
