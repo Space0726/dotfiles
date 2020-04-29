@@ -156,6 +156,6 @@ au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTre
 " ----------------------------------------------------------------------------
 let @i="ggVG="
 let @p="i#include <iostream>\<CR>\<CR>using namespace std;\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<Esc>kko"
-let @c="i#include <stdio.h>\<CR>\<CR>int main() {\<CR>\<CR>return 0;\<Esc>kko"
+let @c="i#include <stdio.h>\<CR>\<CR>int main()\<CR>{\<CR>\<CR>return 0;\<Esc>kko"
 let @j="ipublic class  {\<CR>public static void main(String[] args) {\<CR>\<Esc>ggeela"
 let @h="i<!DOCTYPE html>\<CR><html>\<CR><head>\<CR><meta charset=\"UTF-8\">\<CR><title></title>\<CR><link rel=\"stylesheet\" href=\"./style.css\">\<CR></head>\<CR><body>\<CR></body>\<CR></html>\<Esc>:5\<CR>f>a"
