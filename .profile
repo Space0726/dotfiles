@@ -26,5 +26,5 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+PATH="$HOME/.script:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=$PATH:$HOME/.script
