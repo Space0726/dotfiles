@@ -39,10 +39,11 @@ set incsearch
 set showcmd
 set autoread
 set mouse=a
-set visualbell      " Show error sign on screen instead of sound
+"set visualbell      " Show error sign on screen instead of sound
 set ww+=h,l         " Possible to move line using h,l
 set linebreak       " Break line by word
 set t_ut=""         " Prevent background color bug in WSL
+colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " File type settings
@@ -144,11 +145,6 @@ let g:NERDCustomDelimiters = {'cpp': { 'left': '// ', 'leftAlt': '/*', 'rightAlt
 " For Airline
 " ----------------------------------------------------------------------------
 let g:airline_theme = 'bubblegum'
-
-" ----------------------------------------------------------------------------
-" For Colorschemes
-" ----------------------------------------------------------------------------
-colorscheme gruvbox
 
 " ----------------------------------------------------------------------------
 " Close vim if the only window left open is a NERDTree

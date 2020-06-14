@@ -128,9 +128,10 @@ fi
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
 
+# For powerline-go
 GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -cwd-max-depth 1 -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -cwd-mode dironly -error $?)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
