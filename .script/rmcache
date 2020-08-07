@@ -1,0 +1,2 @@
+rm -rv `find . -name __pycache__`
+rm -v `find . -name "*.pyc"`
