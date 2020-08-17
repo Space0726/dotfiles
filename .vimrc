@@ -79,15 +79,9 @@ xnoremap > >gv
 " ----------------------------------------------------------------------------
 " Auto bracket
 " ----------------------------------------------------------------------------
-"inoremap <silent> (     ()<Esc>i
 inoremap <silent> (<CR> ()<Esc>i<CR><Esc>O
-"inoremap <silent> ()    ()
-"inoremap <silent> {     {}<Esc>i
 inoremap <silent> {<CR> {}<Esc>i<CR><Esc>O
-"inoremap <silent> {}    {}
-"inoremap <silent> [     []<Esc>i
 inoremap <silent> [<CR> []<Esc>i<CR><Esc>O
-"inoremap <silent> []    []
 
 " ----------------------------------------------------------------------------
 " Remapping
