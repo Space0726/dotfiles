@@ -9,10 +9,7 @@ for name in "$@"
 do
     case "$name" in
         *.java)
-            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
-            ;;
-        *.class)
-            java.exe -classpath "`wslpath -w "$(dirname "$name")"`" "$(basename "${name%.*}")"
+            java -classpath "$(dirname "$name")" "$(basename "${name%.*}")"
             ;;
         *.py)
             python3 "${name}"

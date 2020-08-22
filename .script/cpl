@@ -39,7 +39,7 @@ else
                 g++ -O2 -o "${name%.*}" "${name}"
                 ;;
             *.java)
-                javac.exe -encoding utf-8 "`wslpath -w "$name"`"
+                javac "${name}"
                 ;;
             *.py)
                 ;;
