@@ -39,7 +39,7 @@ else
                 g++ -O2 -o "${name%.*}" "${name}"
                 ;;
             *.java)
-                javac "${name}"
+                javac -Xlint "${name}"
                 ;;
             *.py)
                 ;;
